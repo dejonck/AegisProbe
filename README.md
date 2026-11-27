@@ -15,7 +15,7 @@ image once, then runs a battery of free and open-source security tools plus
 a set of custom checks against a **login page** of a web shop. At the end of
 a run it produces **one password-protected PDF report**
 (`AegisProbe-Report-Protected.pdf`) written for a mixed audience of
-management and IT staff, with the AegisProbe logo on **every page**.
+management and IT staff.
 
 ---
 
