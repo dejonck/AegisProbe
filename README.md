@@ -397,6 +397,3 @@ solely responsible for obtaining the necessary authorization and for
 complying with all applicable laws, regulations, and third-party terms
 of service. **If you are not sure whether you are allowed to test a
 target, you are not allowed to test it.**
-```
-
----
