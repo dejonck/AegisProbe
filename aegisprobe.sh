@@ -246,17 +246,29 @@ RUN set -eux; \
     curl -fsSL "$url" -o /tmp/nuclei.zip; \
     unzip -o /tmp/nuclei.zip nuclei -d /usr/local/bin; chmod +x /usr/local/bin/nuclei; rm -f /tmp/nuclei.zip
 
-# dalfox (laatste release binary)
+# dalfox (laatste release binary, officiële asset-naamgeving)
 RUN set -eux; \
     arch="$(dpkg --print-architecture)"; \
-    case "$arch" in amd64) a=linux_amd64;; arm64) a=linux_arm64;; *) echo "onbekende arch $arch"; exit 1;; esac; \
+    case "$arch" in \
+      amd64) a="x86_64";; \
+      arm64) a="aarch64";; \
+      *) echo "onbekende arch $arch"; exit 1;; \
+    esac; \
     url="$(curl -fsSL https://api.github.com/repos/hahwul/dalfox/releases/latest \
-        | jq -r --arg s "$a.tar.gz" '.assets[] | select(.name|endswith($s)) | .browser_download_url' | head -n1)"; \
-    if [ -n "$url" ]; then \
-      curl -fsSL "$url" -o /tmp/dalfox.tgz; tar -xzf /tmp/dalfox.tgz -C /usr/local/bin dalfox; \
-      chmod +x /usr/local/bin/dalfox; rm -f /tmp/dalfox.tgz; \
-    else echo "dalfox-release niet gevonden, probeer go install"; go install github.com/hahwul/dalfox/v2@latest \
-      && cp /root/go/bin/dalfox /usr/local/bin/dalfox; fi
+        | jq -r --arg s "linux-${a}-musl.tar.gz" \
+          '.assets[] | select(.name | endswith($s)) | .browser_download_url' | head -n1)"; \
+    if [ -z "$url" ]; then \
+      echo "dalfox musl-asset niet gevonden, probeer glibc-variant"; \
+      url="$(curl -fsSL https://api.github.com/repos/hahwul/dalfox/releases/latest \
+        | jq -r --arg s "linux-${a}.tar.gz" \
+          '.assets[] | select(.name | endswith($s)) | .browser_download_url' | head -n1)"; \
+    fi; \
+    [ -n "$url" ] || { echo "dalfox-release niet gevonden"; exit 1; }; \
+    curl -fsSL "$url" -o /tmp/dalfox.tgz; \
+    tar -xzf /tmp/dalfox.tgz -C /tmp; \
+    find /tmp -maxdepth 2 -name dalfox -type f -exec cp {} /usr/local/bin/dalfox \; ; \
+    chmod +x /usr/local/bin/dalfox; \
+    rm -f /tmp/dalfox.tgz
 
 # feroxbuster (laatste release binary)
 RUN set -eux; \
