@@ -141,7 +141,7 @@ Target website
 
 5. Installation
 
-git clone https://github.com/your-org/aegisprobe.git
+git clone https://github.com/dejonck/aegisprobe.git
 cd aegisprobe
 chmod +x aegisprobe.sh
 
