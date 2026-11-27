@@ -3,4 +3,4 @@
 </p>
 
 # AegisProbe
-Automated Web Red Team &amp; Executive Reporting Suite
+Automated light weight Web Red Team &amp; Executive Reporting Suite
