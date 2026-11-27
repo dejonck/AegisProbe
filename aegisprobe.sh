@@ -196,7 +196,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Python-tools in een venv
 RUN python3 -m venv /opt/venv \
  && /opt/venv/bin/pip install --no-cache-dir wapiti3 sslyze arjun \
-      pyjwt csp-evaluator requests \
+      pyjwt requests \
  && ln -s /opt/venv/bin/wapiti /usr/local/bin/wapiti \
  && ln -s /opt/venv/bin/sslyze /usr/local/bin/sslyze \
  && ln -s /opt/venv/bin/arjun /usr/local/bin/arjun
