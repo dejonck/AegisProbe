@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/aegisprobe-logo.png" alt="AegisProbe Logo" width="420" />
+  <img src="./aegisprobe-logo.png" alt="AegisProbe Logo" width="420" />
 </p>
 
 # AegisProbe
