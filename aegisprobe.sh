@@ -87,10 +87,11 @@ print_banner() {
     chafa --size=46x23 "$LOGO_PATH" 2>/dev/null || true
   fi
   printf "\n${W}  ══════════════════════════════════════════════════════${N}\n"
-  printf "${W}   █▀▀█ █▀▀ █▀▀▀ ▀█▀ █▀▀▀ ▀█▀${N}  ${R}█▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀${N}\n"
-  printf "${W}   █▄▄█ █▀▀ █ ▀█  █  ▀▀▀█  █ ${N}  ${R}█▄▄▀ █▄▄▀ █  █ █▀▀▄ █▀▀${N}\n"
-  printf "${W}   ▀  ▀ ▀▀▀ ▀▀▀▀ ▀▀▀ ▀▀▀▀  ▀ ${N}  ${R}▀    ▀ ▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀${N}\n"
-  printf "${G}   Red Team Web Security Toolkit — gebruik enkel met schriftelijke toestemming${N}\n"
+  printf "${W}   █▀▀█ █▀▀ █▀▀▀ ▀█▀ █▀▀▀ ${N}  ${R}█▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀${N}\n"
+  printf "${W}   █▄▄█ █▀▀ █ ▀█  █  ▀▀▀█ ${N}  ${R}█▄▄▀ █▄▄▀ █  █ █▀▀▄ █▀▀${N}\n"
+  printf "${W}   ▀  ▀ ▀▀▀ ▀▀▀▀ ▀▀▀ ▀▀▀▀ ${N}  ${R}▀    ▀ ▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀${N}\n"
+  printf "${G}     Red Team light weight Web Security Toolkit${N}\n"
+  printf "${G}     Gebruik enkel met schriftelijke toestemming${N}\n"
   printf "${W}  ══════════════════════════════════════════════════════${N}\n\n"
 }
 
