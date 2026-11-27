@@ -400,7 +400,3 @@ target, you are not allowed to test it.**
 ```
 
 ---
-
-### How to download this as a single file
-
-Copy **everything between the first and last triple-backtick fence above** (the content that starts with `# AegisProbe — Red Team Web Security Toolkit` and ends with the closing disclaimer paragraph) into a plain-text editor (Notepad, VS Code, `nano`), save it as **`README.md`** (UTF-8, no BOM), and you're done. That is your complete GitHub-ready README in one file.
