@@ -3,8 +3,6 @@
 </p>
 
 # AegisProbe - Red Team Web Security Toolkit
-```markdown
-# AegisProbe — Red Team Web Security Toolkit
 
 > **Use only with prior written authorization from the system owner.**
 > AegisProbe performs active security testing against web applications.
@@ -148,7 +146,7 @@ will skip any path matching those keywords.
 ## 5. Installation
 
 ```bash
-git clone https://github.com/<your-org>/aegisprobe.git
+git clone https://github.com/<dejonck>/aegisprobe.git
 cd aegisprobe
 chmod +x aegisprobe.sh
 ```
