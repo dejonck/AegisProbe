@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./aegisprobe-logo.png" alt="AegisProbe Logo" width="420" />
+  <img src="./assets/AegisProbe_Cyber_Falcon_Logo.png" alt="AegisProbe Logo" width="420" />
 </p>
 <p align="center"><sub>This PNG is only here so the logo renders in this README on GitHub — the script itself does not need it (see §8).</sub></p>
 
